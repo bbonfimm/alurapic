@@ -1,0 +1,14 @@
+<div class="ui cards">
+        <div ng-repeat="c in cards">
+            <div class="card" ng-if="c.ativo">
+                <div class="content" ng-class="{'fundo-azul': passo == 2}">
+                    <label class="center">{{c.titulo}}</label>
+                    <img class="full" src="{{c.url}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="content borda-petra">
+    <div class="content">
