@@ -11,6 +11,7 @@ angular.
 
         $routeProvider.when('/fotos/new', {
             templateUrl: 'partials/foto.html',
+            controller: 'FotoController'
         });
 
         $routeProvider.otherwise({ redirectTo: '/fotos' });
