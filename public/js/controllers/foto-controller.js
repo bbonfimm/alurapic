@@ -1,19 +1,16 @@
-angular.
-    module('alurapic').
-    controller('FotoController', function ($scope) {
+angular.module('alurapic').controller('FotoController', function ($scope, $http) {
 
-        $scope.foto = {};
+    $scope.foto = {};
 
-        $scope.submeter = function() {
-            console.log($scope.foto);
-        };
+    $scope.submeter = function () {
+        $http.post('v1/fotos', $scope.foto)
+            .success(function () {
+                $scope.foto = {};
+                console.log('Enviado com sucesso!');
+            })
+            .error(function (erro) {
+                console.log(erro);
+            });
+    };
 
-    });
-
-// Exemplo anterior de como foi feito Promise.
-//     var promise = $http.get ('v1/fotos');
-//     promise.then(function (retorno) {
-//         $scope.fotos = retorno.data;
-//     }).catch(function(error) {
-//         console.log(error);
-//     });
+});
