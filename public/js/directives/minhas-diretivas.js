@@ -27,7 +27,7 @@ angular.
             url: '@'
         };
 
-        ddo.template='<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';
+        ddo.template= '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';
 
         return ddo;    
     
